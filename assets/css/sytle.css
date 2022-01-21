@@ -1,0 +1,45 @@
+header h3 {
+    display: inline-block;
+    font-size: 20px;
+    color:purple;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.quiz {
+    text-align: center;
+}
+
+div.optlist {
+    text-align: center;
+    
+}
+
+.optlist ul {
+   align-items: left;
+}
+
+.optlist li {
+    list-style-type: none;
+    padding: 10px;
+    margin-left 30%;;
+    margin-right: auto;
+    border-radius: 15px;
+        }
+
+    .optlist li:hover {
+        color: royalblue;
+        border-radius: 500px;
+        text-shadow: none;
+    }
+
+.results {
+    font-size: large;
+    font-weight: bold;
+    font-style: oblique;
+}
+.change {
+    font-size: 20px;
+    
+}
