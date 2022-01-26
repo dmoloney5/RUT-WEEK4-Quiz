@@ -78,7 +78,6 @@ label.setAttribute("for", "initials");
 label.innerHTML = "Initials: ";
 
 const usernameText = document.getElementById("initials");
-
 document.body.insertBefore(label, usernameText);
 // insert textbox
 document.body.appendChild(input);
