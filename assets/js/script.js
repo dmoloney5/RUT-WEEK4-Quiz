@@ -6,22 +6,6 @@ var questions = [
     answer: "3: alerts",
   },
   {
-    question:
-      "The condition in an if / else statement is enclosed within ____.",
-    choices: ["1: quotes", "2: curly brackets", "3: parentheses", "4: square brackets"],
-    answer: "3: parentheses",
-  },
-  {
-    question: "Which of the following is correct about features of JavaScript?",
-    choices: ["1: JavaScript is is complementary to and integrated with HTML.", "2: JavaScript is open and cross-platform.", "3: Both of the above.", "4: All of the above."],
-    answer: "3: Both of the above.",
-  },
-  {
-    question: "Which of the following is the correct syntax to print a page using JavaScript?",
-    choices: ["1: window.print();", "2: browser.print();", "3: navigator.print();", "4: document.print();"],
-    answer: "1: window.print();",
-  },
-  {
     question: "Which built-in method returns the length of the string?",
     choices: ["1: length()", "2: size()", "3: index()", "4: None of the above."],
     answer: "1: length()",
@@ -70,7 +54,7 @@ var timerEl = document.querySelector("#timer");
 
 
 var questionIndex = 0;
-var correctCount = 0;
+var score = 0;
 
 //time counter
 var time = 40;
@@ -80,7 +64,7 @@ var intervalId;
 function endQuiz() {
   clearInterval(intervalId);
   var body = document.body;
-  body.innerHTML = "Game over, You scored " + correctCount;
+  localStorage.setItem('mostRecentScore', score);
 
 // create label
 const input = document.createElement("input");
@@ -106,6 +90,7 @@ function updateTime() {
   timerEl.textContent = time;
   if (time <= 0) {
     endQuiz();
+    return window.location.assign("./end.html");
   }
 }
 
@@ -147,7 +132,7 @@ function checkAnswer(event) {
     var answer = event.target.textContent;
     if (answer === questions[questionIndex].answer) {
       questionResultEl.textContent = "Correct";
-      correctCount++;
+      score++;
     } else {
       questionResultEl.textContent = "Incorrect";
       time = time - 2;

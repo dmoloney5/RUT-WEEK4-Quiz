@@ -2,37 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./assets/css/sytle.css" />
-    <title>JavaScript Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Quick Quiz</title>
+  <link rel="stylesheet" href="./assets/css/app.css" />
 </head>
 
 <body>
-    <header>
-        <section>
-            <nav>
-                <h3>
-                    <a href="#high-score">View High Score</a>
-                    <a class="time" id="timer"></a>
-                </h3>
-            </nav>
-        </section>
-    </header>
-
-    <section class="quiz">
-        <h1>Questions:</h1>
-        <div class="quest" id="question"></div>
-
-        <ul class="optlist" id="option-list"> Opions</ul>
-
-        <div class="results" id="question-result">Your Answer</div>
-
-        <div class="change" id="change-question">Change Question</div>
-    </section>
-
- 
-    <script src="./assets/js/script.js"></script>
+  <div class="container">
+    <div id="home" class="flex-center flex-column">
+      <h1>Want to play a game?</h1>
+      <p>Rules: You have 40 seconds to answer as many questions as you can. For every wrong answer, 2 second will be
+        subtracted from your timer. Once you complete the game you will be asked to input your initials, if your score
+        is in the top 5 will see your initials on the High Score Table. Click Play to start the game or click High Score
+        to see the top 5 players</p>
+      <a class="btn" href="./game.html">Play</a>
+      <a class="btn" href="./highscores.html">High Scores</a>
+    </div>
+  </div>
 </body>
 
 </html>
